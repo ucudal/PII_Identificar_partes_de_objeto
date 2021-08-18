@@ -10,8 +10,8 @@ namespace PosterObjectsClassesMessages
 
         public Person(string name, string id) 
         { 
-            This.name = name; 
-            This.id = id; 
+            this.name = name; 
+            this.id = id; 
         } 
 
         public void IntroduceYourself() 
