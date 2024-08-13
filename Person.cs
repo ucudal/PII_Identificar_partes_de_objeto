@@ -1,34 +1,41 @@
-using System; 
- 
-namespace PosterObjectsClassesMessages 
-{ 
-    public class Person
+using System;
+
+namespace Ucu.Poo.Persons;
+
+public class Person
+{
+    private string name;
+    public string Name
     {
-
-        public string Name {get; set;}
-
-        public string Id {get; set;}
-
-        public Person(string name, string id)
-        {
-            this.Name = name;
-            this.Id = id;
-        }
-
-        public void IntroduceYourself()
-        {
-            Console.WriteLine($"Soy {this.Name} y mi cédula es {this.Id}");
-        }
+        get { return name; } set { name = value; }
     }
 
-    class Program 
+    private string id;
+    public string Id
+    {
+        get { return id; } set { id = value; }
+    }
+
+    public Person(string name, string id)
+    {
+        this.Name = name;
+        this.Id = id;
+    }
+
+    public void IntroduceYourself()
+    {
+        Console.WriteLine(
+            $"Soy {this.Name} y mi cédula es {this.Id}");
+    }
+}
+
+class Program 
+{ 
+    static void Main(string[] args) 
     { 
-        static void Main(string[] args) 
-        { 
-            Person john = new Person("John Doe", "1.234.567-8"); 
-            Person jane = new Person("Jane Doe", "8.765.432-1"); 
-            john.IntroduceYourself(); 
-            jane.IntroduceYourself(); 
-        } 
+        Person john = new Person("John Doe", "1.234.567-8"); 
+        Person jane = new Person("Jane Doe", "8.765.432-1"); 
+        john.IntroduceYourself(); 
+        jane.IntroduceYourself(); 
     } 
 }
